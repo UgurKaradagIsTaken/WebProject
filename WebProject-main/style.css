@@ -1,19 +1,21 @@
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
-    text-decoration: none; /* No underline for links */
+    box-sizing: border-box;
 }
 
+/* Apply a custom font (example) */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
+/* Navigation bar styles */
 nav {
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
     padding: 15px 0;
     text-align: center;
@@ -21,6 +23,7 @@ nav {
 
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -31,27 +34,60 @@ nav ul li {
 nav ul li a {
     color: #fff;
     font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: #f4f4f4;
+    background-color: #0056b3;
+    border-radius: 4px;
+    padding: 5px 15px;
+    text-decoration: underline; /* Underline effect on hover */
 }
 
-.container {
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: auto;
+/* Container styles */
+.container, .login-container, .signup-container, .clubs-container, .events-container, .about-container {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
 }
 
-.footer {
-    background-color: #333;
-    color: white;
+/* Button styles */
+.login-container input[type="submit"],
+.signup-container input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.login-container input[type="submit"]:hover,
+.signup-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Add background image to the hero section */
+#hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000; /* Change text color to black */
+    padding: 100px 0;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Responsive design */
@@ -59,5 +95,9 @@ nav ul li a:hover {
     nav ul li {
         display: block;
         margin: 10px 0;
+    }
+    
+    .container, .login-container, .signup-container {
+        padding: 0 10px;
     }
 }
